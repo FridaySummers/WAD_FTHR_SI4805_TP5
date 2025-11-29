@@ -16,9 +16,13 @@ class Book extends Model
     protected $table = 'books';
 
     protected $fillable = [
+<<<<<<< HEAD
         'title',
         'author',
         'published_year',
         'is_available',
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     ];
 }

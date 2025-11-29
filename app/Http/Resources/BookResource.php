@@ -15,6 +15,7 @@ class BookResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+<<<<<<< HEAD
             'id' => $this->id,
             'title' => $this->title,
             'author' => $this->author,
@@ -22,6 +23,9 @@ class BookResource extends JsonResource
             'is_available' => (bool) $this->is_available,
             'created_at' => $this->created_at ? $this->created_at->toDateTimeString() : null,
             'updated_at' => $this->updated_at ? $this->updated_at->toDateTimeString() : null,
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
         ];
     }
 }

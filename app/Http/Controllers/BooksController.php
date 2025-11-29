@@ -16,8 +16,11 @@ class BooksController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $books = Book::all();
         return response()->json(BookResource::collection($books), 200);
+=======
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 
     /**
@@ -26,6 +29,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'author' => 'required|string|max:255',
@@ -42,6 +46,9 @@ class BooksController extends Controller
             'message' => 'Book created successfully',
             'data' => new BookResource($book)
         ], 201);
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 
     /**
@@ -50,6 +57,7 @@ class BooksController extends Controller
      */
     public function show(string $id)
     {
+<<<<<<< HEAD
         $book = Book::find($id);
 
         if (!$book) {
@@ -57,6 +65,9 @@ class BooksController extends Controller
         }
 
         return response()->json(new BookResource($book), 200);
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 
     /**
@@ -65,6 +76,7 @@ class BooksController extends Controller
      */
     public function update(Request $request, string $id)
     {
+<<<<<<< HEAD
         $book = Book::find($id);
         if (!$book) {
             return response()->json(['message' => 'Book not found'], 404);
@@ -87,6 +99,9 @@ class BooksController extends Controller
             'message' => 'Book updated successfull',
             'data' => new BookResource($book)
         ], 200);
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 
     /**
@@ -95,6 +110,7 @@ class BooksController extends Controller
      */
     public function destroy(string $id)
     {
+<<<<<<< HEAD
         $book = Book::find($id);
         if (!$book) {
             return response()->json(['message' => 'Book not found'], 404);
@@ -103,6 +119,8 @@ class BooksController extends Controller
         $book->delete();
 
         return response()->json(['message' => 'Book deleted successfully'], 200);
+=======
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 
     /**
@@ -111,6 +129,7 @@ class BooksController extends Controller
      */
     public function borrowReturn(string $id)
     {
+<<<<<<< HEAD
         $book = Book::find($id);
         if (!$book) {
             return response()->json(['message' => 'Book not found'], 404);
@@ -126,5 +145,8 @@ class BooksController extends Controller
             'message' => "Book successfully {$status}.",
             'data' => new BookResource($book)
         ], 200);
+=======
+
+>>>>>>> 0dfb2fa5e1f9378ad8fdbf5708fc33b3dc077aca
     }
 }
